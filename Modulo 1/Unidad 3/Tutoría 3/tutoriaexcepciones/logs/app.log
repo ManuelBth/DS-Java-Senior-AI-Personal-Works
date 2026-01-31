@@ -1,0 +1,5 @@
+2026-01-29 21:26:12 INFO  Main:16 - Iniciando la aplicacion de gestion bancaria
+2026-01-29 21:26:12 INFO  CajeroService:17 - Iniciando solicitud de retiro de: $150.0
+2026-01-29 21:26:12 INFO  CajeroService:31 - Retiro exitoso de: $150.0. Nuevo saldo: $850.0
+2026-01-29 21:26:12 INFO  Main:30 - Saldo final de la cuenta: 850.0
+2026-01-29 21:26:12 INFO  Main:31 - Finalizando la aplicacion de gestion bancaria
