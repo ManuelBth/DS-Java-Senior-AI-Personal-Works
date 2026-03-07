@@ -22,7 +22,11 @@ public class Main {
 
         //ejemplo5(productos);
 
-        ejemplo6(productos);
+        //ejemplo6(productos);
+
+        //ejemplo7(productos);
+
+        ejemplo8(productos);
 
         // Se puede concatenar otro método terminal, como por ejemplo contar el número de productos por categoría
 
@@ -85,6 +89,25 @@ public class Main {
             System.out.println("  Precio mínimo: " + v.getMin());
             System.out.println("  Precio máximo: " + v.getMax());
         });
+    }
+
+    public static void ejemplo7(List<Producto> productos) {
+
+        // Map<Boolean, List<Clase>>
+        
+        var resultado  = productos.stream()
+                .collect(Collectors.partitioningBy(p -> p.getPrecio() >= 500));
+
+        resultado.get(true)
+              .forEach(producto -> System.out.println(" - " + producto.getNombre() + ": " + producto.getPrecio()));
+    }
+
+    public static void ejemplo8(List<Producto> productos) {
+        // Map<Boolean, Long>
+        var resultado = productos.stream()
+                .collect(Collectors.partitioningBy(p -> p.getPrecio() > 500, Collectors.counting()));
+
+        resultado.forEach((clave, valor) -> System.out.println("Clave: " + clave + ", Valor: " + valor));
     }
 
 }
